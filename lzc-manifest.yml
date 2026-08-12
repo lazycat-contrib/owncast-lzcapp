@@ -16,7 +16,6 @@ application:
   ingress:
     - protocol: tcp
       port: 1935
-      publish_port: "1935"
       service: owncast
       description: "RTMP ingest"
 

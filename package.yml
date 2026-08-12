@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.owncast
-version: 0.2.5
+version: 0.2.4
 name: OwnCast
 description: "免费的开源实时视频和网络聊天服务器"
 homepage: https://owncast.online
