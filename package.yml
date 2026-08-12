@@ -1,0 +1,20 @@
+package: cloud.lazycat.app.owncast
+version: 0.2.5
+name: OwnCast
+description: "免费的开源实时视频和网络聊天服务器"
+homepage: https://owncast.online
+author: owncast
+license: MIT
+min_os_version: 1.5.0
+
+locales:
+  zh:
+    name: OwnCast
+    description: "免费的开源实时视频和网络聊天服务器"
+    entries.main.title: "直播主页"
+    entries.admin.title: "管理后台"
+  en:
+    name: OwnCast
+    description: "Free and open source live video streaming and web chat server"
+    entries.main.title: "Live Stream"
+    entries.admin.title: "Administration"

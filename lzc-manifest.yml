@@ -1,0 +1,32 @@
+application:
+  subdomain: owncast
+  background_task: true
+  public_path:
+    - /
+  entries:
+    - id: main
+      title: "Live Stream"
+      path: /
+    - id: admin
+      title: "Administration"
+      path: /admin
+  upstreams:
+    - location: /
+      backend: http://owncast:8080/
+  ingress:
+    - protocol: tcp
+      port: 1935
+      publish_port: "1935"
+      service: owncast
+      description: "RTMP ingest"
+
+services:
+  owncast:
+    # upstream: docker.io/owncast/owncast:0.2.5
+    image: owncast/owncast:0.2.5
+    binds:
+      - /lzcapp/var/data:/app/data
+
+usage: |
+  打开应用进入 OwnCast 直播页面；管理后台位于 /admin。
+  推流地址使用 rtmp://<懒猫设备地址>:1935/live，推流密钥请在管理后台查看和修改。
