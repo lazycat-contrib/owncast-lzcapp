@@ -18,14 +18,12 @@ application:
       port: 1935
       service: owncast
       description: "RTMP ingest"
-
 services:
   owncast:
-    # upstream: docker.io/owncast/owncast:0.2.4
-    image: owncast/owncast:0.2.4
+    # upstream: docker.io/owncast/owncast:0.2.5
+    image: registry.lazycat.cloud/czyt/owncast/owncast:265fee5ec9ae18c5
     binds:
       - /lzcapp/var/data:/app/data
-
 usage: |
   打开应用进入 OwnCast 直播页面；管理后台位于 /admin。
   推流地址使用 rtmp://<懒猫设备地址>:1935/live，推流密钥请在管理后台查看和修改。
