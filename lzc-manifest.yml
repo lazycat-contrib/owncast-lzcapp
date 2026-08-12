@@ -21,8 +21,8 @@ application:
 
 services:
   owncast:
-    # upstream: docker.io/owncast/owncast:0.2.5
-    image: owncast/owncast:0.2.5
+    # upstream: docker.io/owncast/owncast:0.2.4
+    image: owncast/owncast:0.2.4
     binds:
       - /lzcapp/var/data:/app/data
 
