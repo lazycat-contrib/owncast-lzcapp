@@ -20,8 +20,8 @@ application:
       description: "RTMP ingest"
 services:
   owncast:
-    # upstream: docker.io/owncast/owncast:0.2.5
-    image: registry.lazycat.cloud/czyt/owncast/owncast:265fee5ec9ae18c5
+    # upstream: docker.io/owncast/owncast:0.3.0
+    image: registry.lazycat.cloud/czyt/owncast/owncast:9c078f05cb168811
     binds:
       - /lzcapp/var/data:/app/data
 usage: |
