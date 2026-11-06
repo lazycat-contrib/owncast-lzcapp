@@ -4,7 +4,7 @@ project:
   root: .
   build_config: lzc-build.yml
   package_file: package.yml
-  output: dist/cloud.lazycat.app.owncast.lpk
+  output: dist/application.lpk
   target_arch: amd64
 
 update:
@@ -25,19 +25,13 @@ images:
     source: docker.io/owncast/owncast
     channel: stable
     sort: semver
-    tag_regex: '^\d+\.\d+\.\d+$'
+    tag_regex: '^v?[0-9]+[.][0-9]+[.][0-9]+$'
     delivery:
-      mode: lazycat
+      mode: mirror
+      require_digest_match: true
 
 stores:
   official:
-    enabled: true
-    continue_if_newer_version: true
-    skip_if_version_exists: true
-    retry:
-      enabled: false
+    enabled: false
   private:
-    enabled: true
-    skip_if_version_exists: true
-    name: OwnCast
-    summary: Published from GitHub Actions
+    enabled: false
